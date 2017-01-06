@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100vw;
+				height: 100vh;
+				background-color: #D1E4EA;
+				position: relative;
+				overflow: hidden;
+			}
+			.sun{
+				width: 200px;
+				height: 200px;
+				background-color: coral;
+				border-bottom-left-radius: 100%;
+				box-shadow: 0 0 30px orange;
+				position: absolute;
+				right: 0;
+			}
+			.mountain1{
+				width: 800px;
+				height: 800px;
+				background-color: khaki;
+				border-radius: 50px;
+				transform: rotate(45deg);
+				position: absolute;
+				top:550px;
+				left: 300px;
+			}
+			.lawn1{
+				width: 100%;
+				height: 260px;
+				background-color: green;
+				border-top-left-radius: 100%;
+				border-top-right-radius: 160%;
+				position: absolute;
+				bottom: 0;
+			}
+			.lawn2{
+				width: 100%;
+				height: 220px;
+				background-color: #00CD44;
+				border-top-right-radius: 200%;
+				position: absolute;
+				bottom: 0;
+				left: -100px;
+			}
+			.lawn3{
+				width: 100%;
+				height: 220px;
+				background-color: #8AFF9F;
+				border-top-left-radius: 100%;
+				box-shadow: 0 0 50px #54CD6D inset;
+				position: absolute;
+				bottom: 0;
+				/*left: -100px;*/
+			}
+			.mountain2{
+				width: 500px;
+				height: 500px;
+				background-color: #CEA392;
+				border-radius: 50px;
+				transform: rotate(45deg);
+				position: absolute;
+				bottom: -150px;
+			}
+			.grass{
+				width: 100%;
+				height: 10px;
+				position: absolute;
+				background-image: linear-gradient(150deg,transparent 0%,transparent 25%, #0AA 25%, #0AA 100%);
+				background-size: 10px 10px;
+				border-bottom: 10px solid #DBCAC2;
+				position: absolute;
+				bottom: 110px;
+			}
+			.rode{
+				width: 100%;
+				height: 90px;
+				background-color: #7A7A7A;
+				border-top:10px solid #B99F93;
+				border-bottom: 10px solid #B99F93;
+				position: absolute;
+				bottom: 0;
+			}
+			.line{
+				width: 100%;
+				height: 8px;
+				background-image: repeating-linear-gradient(to right,#D4D4D4 0%,#D4D4D4 10%,transparent 10%,transparent 20%);
+				position: absolute;
+				bottom: 40px;
+			}
+			.car{
+				width: 100%;
+				height: 50px;
+				background-image: url(img/che.png);
+				background-size: 140px 50px;
+				background-repeat: no-repeat;
+				position: absolute;
+				bottom: 60px;
+				
+				animation: run 5s linear running normal infinite;
+			}
+			@keyframes run{
+				20%{
+					transform: translate(20%,100%);
+				}
+				40%{
+					transform: translate(40%,0%);
+				}
+				60%{
+					transform: translate(60%,100%);
+				}
+				80%{
+					transform: translate(80%,0%);
+				}
+				100%{
+					transform: translate(100%,100%);
+				}
+			}
+			.car>img{
+				width: 30px;
+				height: 30px;
+				
+				animation: rull 1s linear normal infinite;
+			}
+			
+			@keyframes rull{
+				to{
+					transform: rotate(360deg);
+				}
+				
+			}
+			.car>img:nth-child(1){
+				position: absolute;
+				left: 10px;
+				top: 30px;
+			}
+			.car>img:nth-child(2){
+				position: absolute;
+				left: 100px;
+				top: 30px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="sun"></div>
+			<div class="mountain1"></div>
+			<div class="lawn1"></div>
+			<div class="lawn2"></div>
+			<div class="lawn3"></div>
+			<div class="mountain2"></div>
+			<div class="grass"></div>
+			<div class="rode">
+				<div class="line"></div>
+				<div class="car">
+					<img src="img/lun.png" alt="" />
+					<img src="img/lun.png" alt="" />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
