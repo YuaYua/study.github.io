@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				margin-top: 200px;
+				background-color: red;
+				border-radius: 50%;
+				
+			}
+			/*①设置动画相关属性*/
+			div{
+				/*动画名，绑定动画*/
+				animation-name: hahaha;
+				/*animation-name: kekeke;*/
+				/*动画持续时间*/
+				animation-duration: 2s;
+				/*动画延迟时间*/
+				animation-delay: 0s;
+				/*动画运动曲线*/
+				animation-timing-function: linear;
+				/*动画状态（running运行、paused暂停、）*/
+				animation-play-state: running;
+				/*运动结束停留位置*/
+				/*forwards终点 backwards起点*/
+				animation-fill-mode: forwards;
+				/*动画次数*/
+				/*num:任意数值  infinite无限次*/
+				animation-iteration-count: 2;
+				/*动画是否反向播放*/
+				/*alternate-reverse原终点变为第一次运动的起点，且来回运动*/
+				/*alternate原起点为第一次运动的起点，且来回运动*/
+				/*normal原起点为第一次运动的起点，且永远从起点向终点运动*/
+				animation-direction: normal;
+			
+			}
+			/*②设置动画体（动画物体该如何运动）*/
+			/*与绑定动画的相关属性进行匹配*/
+			/*以正方形运动*/
+			@keyframes hahaha{
+				/*from未写任何属性设置时，默认全部取初始值（初始状态）*/
+				
+				/*from{}
+				to{
+					margin-left: 1100px;
+				}*/
+				0%{
+					/*margin-left: 1100px;*/
+				}
+				25%{
+					margin-left: 0;
+					margin-top: 700px;
+				}
+				50%{
+					margin-left: 500px;
+					margin-top: 700px;
+				}
+				75%{
+					margin-left: 500px;
+					margin-top: 200px;
+				}
+				
+			}
+			/*以五角星运动*/
+
+			
+			@keyframes hahaha{
+				20%{
+					margin-top: 200px;
+					margin-left: 600px;
+				}
+				40%{
+					margin-left: 150px;
+					margin-top: 600px;
+				}
+				60%{
+					margin-top: 0;
+					margin-left: 300px;
+				}
+				80%{
+					margin-left: 450px;
+					margin-top: 600px;
+				}
+			}
+			
+			/*@keyframes kekeke{
+				from{
+					margin-left: 1100px;
+				}
+				to{
+					margin-top:100px;
+				}
+				
+			}*/
+		</style>
+	</head>
+
+	<body>
+		<div></div>
+	</body>
+
+</html>

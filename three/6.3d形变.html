@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				margin: 100px auto;
+			}
+			
+			.element {
+				transition: 2s;
+				background-color: yellow;
+			}
+			
+			.stage {
+				/*将舞台设置成3d的*/
+				/*因为舞台层包裹的元素层存在3d运动，舞台层需要设置3d浮动*/
+				/*同理，如果舞台层被景深层包裹，且舞台层也许要3d运动，景深层也必须设置该属性*/
+				transform-style: preserve-3d;
+				transform: rotateY(80deg);
+				-webkit-perspective: 800px;	
+			}
+			.stage:hover{
+				transform: translateZ(-100px);
+			}
+			
+			.element:hover {
+				transform: translateZ(200px);
+			}
+			.eye{
+				background-color: black;
+				/*-webkit-perspective: 800px;*/
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--第一层：景深层-->
+		<div class="eye">
+			<!--第二层：舞台层-->
+			<div class="stage">
+				<!--第三层：元素层-->
+				<div class="element"></div>
+			</div>
+		</div>
+	</body>
+
+</html>

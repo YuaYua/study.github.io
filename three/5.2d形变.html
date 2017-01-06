@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: cyan;
+				margin: 50px auto;
+				font: normal 30px/200px arial;
+				text-align: center;
+				transition: 2s linear;
+				/*旋转中心点*/
+				transform-origin: 0 0;
+			}
+			div:nth-child(1):hover{
+				
+				/*1坐标原点默认在元素中心点*/
+				/*2发生形变后的元素原有位置不变*/
+				/*3默认运动方向为顺时针*/
+				transform: rotate(3600deg);
+			}
+			div:nth-child(2):hover{
+				transition: 2s linear;
+				transform: rotateY(3600deg);
+			}
+			div:nth-child(3):hover{
+				/*缩放的是倍数（0~n,包括小数）*/
+				transform: scaleX(0.5);
+			}
+			div:nth-child(4):hover{
+				/*scale(0.5)<==>x->0.5 y->0.5 z->0.5*/
+				/*scale(0.5)==scale3d(0.5,0.5,0.5)*/
+				transform:scale3d(0.5,0.5,1)
+			}
+			div:nth-child(5):hover{
+				/*偏移是距离（px）*/
+				transform: translate(100px,-100px);
+			}
+			div:nth-child(6){
+				/*倾斜是角度*/
+				/*skewX:y轴向x轴旋转*/
+				/*skewY:x轴向y轴旋转*/
+				transform: skewX(-45deg);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>旋转</div>
+		<div>Y旋转</div>
+		<div>X缩放</div>
+		<div>缩放</div>
+		<div>X/Y偏移</div>
+		<div>倾斜</div>
+		<div>X倾斜</div>
+	</body>
+
+</html>

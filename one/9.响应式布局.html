@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+			}
+			div{
+				height: 300px;
+				float: left;
+			}
+			.div1{
+				width: 30vw;
+				background-color: red;
+			}
+			.div2{
+				width: 50vw;
+				background-color: green;
+			}
+			.div3{
+				width: 20vw;
+				background-color: orange;
+			}
+			/*当页面宽度大于等于1200px满足该条件*/
+			/*满足条件起作用，不管是否起作用，均不影响其他任何条件下的布局*/
+			/*相同属性赋值结果取决于选择器的优先级，如果优先级相同，取决于代码顺序*/
+			@media only screen and (min-width: 1200px) {
+				/*当满足该响应式布局条件时，激活该作用域内的CSS样式*/
+				.div1{
+					background-color: yellow;
+				}
+			}
+			
+			/*当页面宽度大于等于500px 小于1200px时满足该条件*/
+			@media only screen and (min-width: 500px) and (max-width: 1200px) {
+				.div2{
+					background-color: yellow;
+				}
+			}
+			
+			/*当页面宽度小于等于500px满足该条件*/
+			@media only screen and (max-width: 500px) {
+				/*响应式布局条件可以进行一切css样式布局*/
+				.div3{
+					background-color: yellow;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="div1"></div>
+		<div class="div2"></div>
+		<div class="div3"></div>
+	</body>
+
+</html>

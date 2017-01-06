@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				margin: 50px auto;
+			}
+			
+			div{
+				/*格式：水平偏移量 垂直偏移量 模糊度 阴影尺寸 颜色 内外阴影*/
+				/*格式：必须 必须 可选 可选 可选 可选*/
+				box-shadow: 0px 0px 50px 20px black ;
+			}
+			
+			div{
+				/*多重阴影*/
+				/*box-shadow: 10px 10px 10px darkred,10px -10px 10px orange,-10px 10px 10px yellow;*/	
+				box-shadow: 0 0 20px darkred,0 0 40px orange,0 0 60px yellow;
+			}
+			div{
+				text-align: center;
+				line-height: 200px;
+				font-size: 20px;
+				text-shadow: 3px 3px 3px blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div>12345</div>
+	</body>
+</html>

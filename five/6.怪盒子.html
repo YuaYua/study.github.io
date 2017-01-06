@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div,p{
+				width: 200px;
+				height: 200px;
+				background-color: yellowgreen;
+				margin: 50px auto;
+			}
+			.div1{
+				/*border-box:怪异盒子*/
+				/*border、padding、content共享宽高*/
+				/*当border及padding已经占满整个（宽高规定的）盒子时，内容的起始点在盒子中心依次往后显示，但不撑开盒子*/
+				box-sizing: border-box;
+				border: 5px solid orange;
+				padding: 10px;
+			}
+			.div2{
+				/*content-box:盒模型*/
+				/*content就是（宽乘高），border及padding拥有自己的独立区域空间*/
+				box-sizing: content-box;
+				border: 5px solid orange;
+				padding: 10px;
+			}
+			.div3{
+				padding: 10px;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="div1">123</div>
+		<p></p>
+		<div class="div2">123</div>
+		<div class="div3"></div>
+	</body>
+
+</html>

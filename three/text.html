@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+			}
+			
+			div {
+				width: 100vw;
+				height: 40px;
+				/*width: 100%;*/
+				animation: move .8s linear infinite;
+				background: -webkit-linear-gradient(left top, #7ed047 0%, #7ed047 25%, white 25%, white 50%, #7ed047 50%, #7ed047 75%, white 75%, white 100%);
+				background-size: 40px 40px;
+				/*transform: skewX(-45deg);*/
+				/*animation: run 1s infinite alternate-reverse linear;*/
+			}
+			
+			@-webkit-keyframes move {
+				0% {
+					background-position: 0 0;
+				}
+				100% {
+					background-position: 40px 0;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+
+		</div>
+	</body>
+
+</html>

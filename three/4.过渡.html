@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+				margin: 30px auto;
+			}
+			/*过渡：两个效果之间的变化不是瞬变，而是渐变*/
+			/*div:hover{
+				transition: 1s;
+			}*/
+			/*过渡属性需早先设置*/
+			div{
+				/*过渡属性:单一 或 all*/
+				transition-property: all;
+				/*transition-property: background-color;*/
+				/*过渡持续时间：正常过渡效果用户体验较好在3~3.5s*/
+				transition-duration:2s;
+				/*过渡运动曲线：linear匀速、ease慢快慢、ease-in-out慢快慢、ease-in慢快、ease-out快慢*/
+				transition-timing-function: ease;
+				/*过渡延迟时间*/
+				transition-delay: 1s;
+				/*属性默认all可省略，曲线默认ease可省略，延迟看情况*/
+				/*transition: all 2s ease 0.1s;*/
+			}
+			.div1:hover{
+				width: 400px;
+				height: 100px;
+				background-color: blue;
+				
+			}
+			.div2:hover{
+				background-color: red;
+				
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="div1"></div>
+		<div class="div2"></div>
+	</body>
+
+</html>

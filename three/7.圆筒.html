@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.eye {
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -100px;
+				margin-left: -100px;
+				-webkit-perspective: 4000px;
+			}
+			
+			.stage {
+				width: 200px;
+				height: 200px;
+				border: 1px solid red;
+				background: -webkit-linear-gradient( left, rgba(54, 226, 248, 0.5) 0px, rgba(54, 226, 248, 0.5) 3px, rgba(0, 0, 0, 0) 0px), -webkit-linear-gradient( top, rgba(54, 226, 248, 0.5) 0px, rgba(54, 226, 248, 0.5) 3px, rgba(0, 0, 0, 0) 0px);
+				-webkit-background-size: 2.5em 2.5em;
+				/*position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -100px;
+				margin-left: -100px;*/
+				transform-style: preserve-3d;
+				transition: 20s linear;
+			}
+			
+			.stage>div {
+				width: 200px;
+				height: 200px;
+				font: bold 60px/200px arial;
+				text-align: center;
+				/*position: absolute;*/
+			}
+			
+			.ele1 {
+				background-color: yellow;
+				transform: rotateY(0) translateZ(400px);
+			}
+			
+			.ele2 {
+				background-color: cadetblue;
+				transform: rotateY(30deg) translateZ(400px);
+			}
+			
+			.ele3 {
+				background-color: firebrick;
+				transform: rotateY(60deg) translateZ(400px);
+			}
+			
+			.ele4 {
+				background-color: goldenrod;
+				transform: rotateY(90deg) translateZ(400px);
+			}
+			
+			.ele5 {
+				background-color: aqua;
+				transform: rotateY(120deg) translateZ(400px);
+			}
+			
+			.ele6 {
+				background-color: #5F9EA0;
+				transform: rotateY(150deg) translateZ(400px);
+			}
+			
+			.ele7 {
+				background-color: chartreuse;
+				transform: rotateY(180deg) translateZ(400px);
+			}
+			
+			.ele8 {
+				background-color: blue;
+				transform: rotateY(210deg) translateZ(400px);
+			}
+			
+			.ele9 {
+				background-color: blueviolet;
+				transform: rotateY(240deg) translateZ(400px);
+			}
+			
+			.ele10 {
+				background-color: brown;
+				transform: rotateY(270deg) translateZ(400px);
+			}
+			
+			.ele11 {
+				background-color: palevioletred;
+				transform: rotateY(300deg) translateZ(400px);
+			}
+			
+			.ele12 {
+				background-color: cadetblue;
+				transform: rotateY(330deg) translateZ(400px);
+			}
+			
+			.stage:hover {
+				transform: rotateY(3600deg);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="eye">
+			<div class="stage">
+				<div class="ele1">1</div>
+				<div class="ele2">2</div>
+				<div class="ele3">3</div>
+				<div class="ele4">4</div>
+				<div class="ele5">5</div>
+				<div class="ele6">6</div>
+				<div class="ele7">7</div>
+				<div class="ele8">8</div>
+				<div class="ele9">9</div>
+				<div class="ele10">10</div>
+				<div class="ele11">11</div>
+				<div class="ele12">12</div>
+			</div>
+		</div>
+	</body>
+
+</html>

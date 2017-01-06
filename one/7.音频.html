@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<!--autoplay="autoplay"自动播放-->
+		<!--muted="muted" 静音-->
+		<!--loop="loop" 循环播放-->
+		<!--controls="controls" 控制条-->
+		
+		<audio id="audio" src="media/juhua.mp3" autoplay="autoplay">这是一段检测文字，如果你看到了此段文字，代表你丫的电脑不支持音频标签，请你更新浏览器或更换浏览器</audio>
+		<button onclick="changeMusic()">切歌</button>
+	</body>
+	<script type="text/javascript">
+		var ad=document.getElementById("audio");
+		function changeMusic(){
+			if (ad.src.match("mo")) {
+				ad.src = "media/juhua.mp3"
+			} else {
+				ad.src = "media/mo.mp3"
+			}
+		}
+	</script>
+</html>

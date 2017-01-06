@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 30px auto;
+				text-align: center;
+				font-size: 30px;
+			}
+			/*查找有title属性的div元素*/
+			div[title]{
+				color: aqua;
+			}
+			
+			
+			/*title属性值为div1的div属性*/
+			div[title="div1"]{
+				color: navy;
+			}
+			
+			/*^= 以什么开头*/
+			div[title ^="d"]{
+				color: orange;
+			}
+			
+			/*$= 以什么结尾*/
+			div[title $="2"]{
+				color: gold;
+			}
+			
+			/*:not() 除了某某条件的其他条件*/
+			/*索引 不是第一个孩子元素的 div 标签 才满足条件*/
+			div:not(:first-child){
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div title="div1">123</div>
+		<div title="div2">456</div>
+		<div title="div3">789</div>
+		<p>000</p>
+	</body>
+</html>

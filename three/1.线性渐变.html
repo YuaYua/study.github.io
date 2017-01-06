@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: cyan;
+				margin: 30px auto;
+				color: white;
+				font:normal 60px/200px arial;
+				text-align: center;
+				
+			}
+			/*①双色渐变*/
+			/*1线性渐变默认自上而下*/
+			/*2，刨除两端临界点，其余部分属于渐变区域*/
+			div:nth-child(1){
+				background: linear-gradient(red,yellow);
+			}
+			/*②多色渐变*/
+			/*多色渐变，系统会根据渐变颜色个数，合理平分渐变区域*/
+			div:nth-child(2){
+				background: linear-gradient(red,yellow,green);
+			}
+			
+			/*③颜色+百分比*/
+			/*1,渐变区域属于30%~60%之间，*/
+			/*2，30%以上及60%以下分别为纯红 和纯绿*/
+			/*3，后者百分比数值应该大于等于前者百分比*/
+			div:nth-child(3){
+				background: linear-gradient(red 30%,green 20%);
+			}
+			/*④*/
+			/*渐变属于背景图片属性，原因是渐变通过渲染方式达到效果*/
+			/*1、渲染需要内存容量的支持，且会消耗CPU功效，实际开发中并不推荐使用*/ 
+			div:nth-child(4){
+				background-image: linear-gradient(red 25%,yellow 25%,yellow 50%,green 50%);
+			}
+			/*⑤方位+颜色*/
+			div:nth-child(5){
+				background-image: linear-gradient(bottom,red,yellow);
+				/*适用于chrome*/
+				background-image: -webkit-linear-gradient(bottom,red,yellow);
+				/*适用于火狐*/
+				background-image: -moz-linear-gradient(bottom,red,yellow);
+			}
+		
+			/*bottom ,left,right,top,top left,top right,bottom left,bottom right,left top,left bottom,right top,right bottom*/
+			/*45deg 45度角*/
+			div:nth-child(6){
+				background-image: -webkit-linear-gradient(left top,transparent 0%, transparent 50%,red 50%,red 100%);
+				background-size: 100px 200px;
+				
+			}
+			/*⑥到达方位+颜色*/
+			div:nth-child(7){
+				background-image: linear-gradient(to left,red 50%,yellow 50%);
+				background-image: -webkit-linear-gradient(to left,red,yellow);
+			}
+			/*⑦重复渐变*/
+			/*1,重复渐变的百分比（用来平分所占的比重）写在最后一个颜色后面*/
+			/*2，之前的颜色后可以设置百分比，但数值应该由右之左依次减小，*/
+			div:nth-child(8){
+				background-image: -webkit-repeating-linear-gradient(left,red,yellow 20%);
+			}
+			/*⑧重复渐变本质*/
+			div:nth-child(9){
+				background-image: -webkit-linear-gradient(left,red,yellow);
+				background-size: 20% 100%;
+				background-repeat: no-repeat;
+			}
+			div:nth-child(10){
+				background-image: -webkit-linear-gradient(top left,red,yellow);
+				background-size: 50%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		<div>10</div>
+	</body>
+
+</html>
